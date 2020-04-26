@@ -2,33 +2,53 @@
     
     var fullTimeStudent = document.getElementById("studentType1");
     if(fullTimeStudent.checked){
-        var status = "fullTime"
+        var status = 1
     }
     else{
-        var status = "partTime"
+        var status = 2
     }
     var partTimeStudent = document.getElementById("studentType2");
-    var summerStatus ="";
+    var summerStatus =0;
     var summerClass1 = document.getElementById("summerClass1");
     var summerClass2 = document.getElementById("summerClass2");
     if(summerClass1.checked){
-        summerStatus = "Summer1";
+        summerStatus = 1;
         if(summerClass2.checked){
-            summerStatus = summerStatus + " Summer2";
+            summerStatus = summerStatus + 2;
         }
     }
     else if(summerClass2.checked){
-        summerStatus = "Summer2";
+        summerStatus = 2;
     }
 
     var prefTime = document.getElementById("prefTime");
-    var undesTime = document.getElementById("undesTime");
-    console.log( status+" " + " " + summerStatus + " " +  prefTime.value + "  " + undesTime.value);
-    displaySequence();
+    console.log( status+" " + " " + summerStatus + " " +  prefTime.value + "  " );
+    displaySequence(status, summerStatus);
 }
 
-function displaySequence(){
-   var seq =  document.getElementById("sequence");
-   seq.style.visibility = "visible";
+function displaySequence(status, summerStatus){
+
+    if(status == 1 && summerStatus == 0)
+    {
+        var seq =  document.getElementById("sequence");
+        seq.style.display = "block";
+    }
+    if(status == 1 && summerStatus == 1)
+    {
+        var seq =  document.getElementById("sequenceSummer1");
+        seq.style.display = "block";
+    }
+    if(status == 1 && summerStatus == 2)
+    {
+        var seq =  document.getElementById("sequenceSummer2");
+        seq.style.display = "block";
+    }
+    if(status == 1 && summerStatus == 3)
+    {
+        var seq =  document.getElementById("sequenceSummer12");
+        seq.style.display = "block";
+    }
+
+
 }
 
