@@ -20,9 +20,8 @@
     else if(summerClass2.checked){
         summerStatus = 2;
     }
-
-    var prefTime = document.getElementById("prefTime");
     console.log( status+" " + " " + summerStatus + " " +  prefTime.value + "  " );
+
     displaySequence(status, summerStatus);
 }
 
