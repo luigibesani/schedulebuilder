@@ -17,7 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+  <script src="seqGen.js"></script>
 </head>
 
 <body id="page-top">
@@ -43,7 +43,7 @@
       <li class="nav-item">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Luigi's sequence builder</span></a>
+          <span>Dashboard</span></a>
       </li>
 
       <!-- Divider -->
@@ -109,7 +109,7 @@
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item active" href="blank.html">Luigi's sequence builder</a>
+            <a class="collapse-item active" href="blank.html">Blank Page</a>
           </div>
         </div>
       </li>
@@ -147,6 +147,7 @@
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <h1>  Concordia Schedule Builder 2020 </h1>
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -155,30 +156,283 @@
 
          
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
 
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid" >
+        <a class="btn btn-light btn-icon-split float-right" href="#collapseCardExample"data-toggle="collapse" role="button" aria-expanded="true" 
+                    aria-controls="collapseCardExample">
+                    <span class="icon text-gray-600">
+                      <i class="fas fa-arrow-down"></i>
+                    </span>                   
+                  </a>
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Luigi's sequence builder</h1>
+          <div class="seqForm" >
+            <div class="card shadow mb-4" style=" display: inline-block">
+
+            <form name="segGenForm" >
+              <label style="color: #446AD8;" > What type of schedule would you like?</label><br>
+              <label for="studentType" style="color: black;" > Full time student (12 credits per semester AVG) </label>
+              <input type="radio" id="studentType1" name="studentTypeName"  value="fullTime">
+              <br>
+              <label for="studentType" style="color: black;"> Part time student (9 credits per semester AVG)
+                <input type="radio" id="studentType2" name="studentTypeName" value="partTime">
+              </br>
+              </label></br> <br> <br>
+              
+            <label style="color: #446AD8;" > Would you like to take courses during either Summer semesters? <br>Full-time : 6 credits per summer semester AVG <br> Part-time : 3 credits per summer semester AVG</label><br>
+            <label for="summerClasses" style="color: black;"> Summer semester #1  (6.5 weeks)<input type="checkbox" id="summerClass1" name="summer1"  value="summerClass1"> </label>
+            
+            <br>
+            <label for="summerClasses" style="color: black;"> Summer semester #2 (6.5 weeks) <input type="checkbox" id="summerClass2" name="summer2"  value="summerClass2"></label>
+            
+            <br></br> 
+
+              <label for="prefTime" style="color: #446AD8;" >Preffered time of day for courses</label><br>
+                <select id="prefTime" name="prefTime" >
+                  <option value="morning">Morning (8:45 to 12pm)</option>
+                  <option value="afternoon">Afternoon (12pm to 5pm)</option>
+                  <option value="evening">Evening (5pm to 8:45pm)</option>
+                  <option value="night">Night (8:45pm-10:30)</option>
+                </select></br></br>
+                <label for="undesTime" style="color: #446AD8;" >Undesirable time of day for courses</label><br>
+                <select id="undesTime" name="undesTime">
+                  <option value="morning">Morning (8:45 to 12pm)</option>
+                  <option value="afternoon">Afternoon (12pm to 5pm)</option>
+                  <option value="evening">Evening (5pm to 8:45pm)</option>
+                  <option value="night">Night (8:45pm-10:30)</option>
+                </select></br></br><br>
+                <button  type="button" onclick="seqGenText()">Submit</button>
+            </form> 
+            </div>
+          <!-- Content Row -->
+
+          <div id="sequence" style="visibility: collapse;">
+          <h2 class="h3 mb-4 text-gray-800">Student Tentative Schedule CO-OP (2019-2020) [DAY TIME] </h2>
+          <!--fall 2019-->
+          <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary" >Fall 2019</h6>
+                </div>
+                <div class="card-body" id= "collapseCardExample">
+                    <div class="container">
+                     
+                      <table class="table table-hover table-sm">
+                        <thead>
+                          <tr>
+                            <th>Course Number</th>
+                            <th>Course Name</th>
+                            <th>Credits </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Comp 335</td>
+                            <td>Introduction to Theoretical Computer Science</td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr>
+                            <td>Engr 391</td>
+                            <td>Numerical Methods in Engineering</td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr>
+                            <td>Soen 342</td>
+                            <td>Software Requirements and Specifications</td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr> 
+                            <td>Soen 343 </td>
+                            <td>Software Architecture and Desing I </td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr>
+                            <td>Soen 384 </td>
+                            <td>Management, Measurement and Quality Control </td>
+                            <td>3.0 </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+              <!--winter 2020-->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Winter 2020</h6>
+                </div>
+                <div class="card-body" id= "collapseCardExample">
+                    <div class="container">
+                     
+                      <table class="table table-hover table-sm">
+                        <thead>
+                          <tr>
+                            <th>Course Number</th>
+                            <th>Course Name</th>
+                            <th>Credits </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Soen 344</td>
+                            <td>Software Architecture and Design II</td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr>
+                            <td>Soen 345</td>
+                            <td>Software Testing, Verification and Quality Assurance</td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr>
+                            <td>Soen 357</td>
+                            <td>User Interface Design</td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr> 
+                            <td>Soen 390 </td>
+                            <td>Software Engineering Team Design Project </td>
+                            <td>3.5 </td>
+                          </tr>
+                          <tr>
+                            <td>Comp 345 </td>
+                            <td>Advanced Program Design with C++</td>
+                            <td>4.0 </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+             <!-- Page Heading -->
+             <h1 class="h3 mb-4 text-gray-800">Student Tentative Schedule CO-OP (2020-2021) [DAY TIME]</h1>
+              <!--fall 2020-->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Fall 2020</h6>
+                </div>
+                <div class="card-body" id= "collapseCardExample">
+                    <div class="container">
+                     
+                      <table class="table table-hover table-sm">
+                        <thead>
+                          <tr>
+                            <th>Course Number</th>
+                            <th>Course Name</th>
+                            <th>Credits </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Engr 301</td>
+                            <td>Engineering Management Principles and Economics</td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr>
+                            <td>Soen 321</td>
+                            <td>Information Systems Security</td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr>
+                            <td>Soen 490</td>
+                            <td>Capstone Software Engineering Design Project</td>
+                            <td>2.0 </td>
+                          </tr>
+                          <tr> 
+                            <td>Comp 445 </td>
+                            <td>Data Communication and Computer Networks</td>
+                            <td>4.0 </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+              <!--Winter 2021-->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Winter 2021</h6>
+                </div>
+                <div class="card-body" id= "collapseCardExample">
+                    <div class="container">
+                     
+                      <table class="table table-hover table-sm">
+                        <thead>
+                          <tr>
+                            <th>Course Number</th>
+                            <th>Course Name</th>
+                            <th>Credits </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Engr 392</td>
+                            <td>Impact of Technology on Society</td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr>
+                            <td>Soen 385</td>
+                            <td>Control Systems and Applications</td>
+                            <td>3.0 </td>
+                          </tr>
+                          <tr>
+                            <td>Soen 490</td>
+                            <td>Capstone Software Engineering Design Project</td>
+                            <td>2.0 </td>
+                          </tr>
+                          <tr> 
+                            <td>Comp 472 </td>
+                            <td>Artificial Intelligence</td>
+                            <td>4.0 </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+              
+            </div>
 
         </div>
         <!-- /.container-fluid -->
-       
+
       </div>
       <!-- End of Main Content -->
-      <form>
-        <label for="prefTime">Preffered time of day for courses</label><br>
-          <select id="prefTime" name="prefTime">
-            <option value="morning">Morning (8:45 to 12pm)</option>
-            <option value="afternoon">Afternoon (12pm to 5pm)</option>
-            <option value="evening">Evening (5pm to 9pm)</option>
-            <option value="night">Night (8:45pm-10:30pm)</option>
-
-          </select>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value="Doe"><br><br>
-        <input type="submit" value="Submit">
-      </form> 
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">

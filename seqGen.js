@@ -24,5 +24,11 @@
     var prefTime = document.getElementById("prefTime");
     var undesTime = document.getElementById("undesTime");
     console.log( status+" " + " " + summerStatus + " " +  prefTime.value + "  " + undesTime.value);
+    displaySequence();
+}
+
+function displaySequence(){
+   var seq =  document.getElementById("sequence");
+   seq.style.visibility = "visible";
 }
 
