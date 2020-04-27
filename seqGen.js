@@ -47,6 +47,10 @@ function displaySequence(status, summerStatus){
         var seq =  document.getElementById("sequenceSummer12");
         seq.style.display = "block";
     }
+    if(status == 2 && summerStatus == 0){
+        var seq =  document.getElementById("sequencePartTime4");
+        seq.style.display = "block";
+    }
     if(status == 2 && summerStatus == 1){
         var seq =  document.getElementById("sequencePartTime1");
         seq.style.display = "block";
