@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Sequence generator</title>
+  <title>SequenceHub</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -18,6 +18,8 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <script src="seqGen.js"></script>
+  <link href="css/mycss.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -33,7 +35,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3" style="margin-top: 10px;">Sequence Generator</div>
+        <div class="sidebar-brand-text mx-3" style="margin-top: 10px;">SequenceHub</div>
       </a>
 
       <!-- Nav Item - Dashboard -->
@@ -142,15 +144,15 @@
           <!-- Page Heading -->
           <h4 style="margin-left: 20px; color: black;">Valerie's sequence</h4><br>
           <div class="card shadow mb-4">
-          <h6 style="margin-left:20px;" >STEP 1 (Completed) Select program : Software Engineering General Program</h6>
+          <h6 style="margin-left:20px;margin-top: 10px;">STEP 1 (Completed) Select program : Software Engineering General Program</h6>
           </div>
           <div class="card shadow mb-4">
-          <h6 style="margin-left:20px;" >STEP 2 (Completed) Select completed classes : Comp 232, Comp 248, Engr 201,..., Soen 331, Soen 341</h6> <br>
+          <h6 style="margin-left:20px;margin-top: 10px;" >STEP 2 (Completed) Select completed classes : Comp 232, Comp 248, Engr 201,..., Soen 331, Soen 341</h6>
           </div>
 
           <div class="seqForm" >
             <div class="card shadow mb-4" >
-              <h5 style="color: #7A1D2E; margin-left:20px;" >STEP 3 (IN PROGRESS) Select your sequence preferences</h5><br>
+              <h5 style="color: #7A1D2E; margin-left:20px;margin-top: 10px;" >STEP 3 (IN PROGRESS) Select your sequence preferences</h5><br>
 
             <form name="segGenForm" style="margin-left:20px; margin-top:20px;">
               <label style="color: #7A1D2E;" > What type of schedule would you like?</label><br>
@@ -170,15 +172,14 @@
             
             <br></br> 
 
-              <label for="prefTime" style="color: #7A1D2E;" >Preffered time of day for courses</label><br>
+              <label for="prefTime" style="color: #7A1D2E;" >Prefered time of day for courses</label><br>
                 <select id="prefTime" name="prefTime" >
-                  <option value="morning">Morning (8:45 to 12pm)</option>
-                  <option value="afternoon">Afternoon (12pm to 5pm)</option>
-                  <option value="evening">Evening (5pm to 8:45pm)</option>
-                  <option value="night">Night (8:45pm-10:30)</option>
+                  <option value="morning" blocked>Day time (8:45 to 3pm)</option>
+                  <option value="afternoon" disabled>Evening time (3pm to 8:45pm)</option>
                 </select></br></br>
                 
                 <button  type="button" onclick="seqGenText()">Submit</button>
+                <a href="index.html"> <button  type="button" onclick="">Reset</button></a>
             </form> 
             </div>
           <!-- Content Row -->
@@ -801,6 +802,10 @@
                             </div>
                           </div>
                           </div>
+
+
+
+
                           <div id="sequenceSummer12" style="display: none;">
                             <h2 class="h3 mb-4 text-gray-800">Student Tentative Schedule CO-OP (2019-2020) [DAY TIME] </h2>
                             <!--fall 2019-->
@@ -1053,6 +1058,716 @@
                                   </div>
                                 </div>
                                 </div>
+                                <!--end of fullTimesummer12-->
+
+
+                                <div id="sequencePartTime1" style="display: none" >
+                                  <h2 class="h3 mb-4 text-gray-800">Student Schedule Part-Time (2019-2020) [DAY TIME] </h2>
+                                  <!--fall 2019-->
+                                  <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary" >Fall 2019</h6>
+                                        </div>
+                                        <div class="card-body" id= "collapseCardExample">
+                                            <div class="container">
+                                             
+                                              <table class="table table-hover table-sm">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Course Number</th>
+                                                    <th>Course Name</th>
+                                                    <th>Credits </th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>Soen 342</td>
+                                                    <td>Software Requirements and Specifications</td>
+                                                    <td>3.0 </td>
+                                                  </tr>
+                                                  <tr> 
+                                                    <td>Soen 343 </td>
+                                                    <td>Software Architecture and Desing I </td>
+                                                    <td>3.0 </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Soen 384 </td>
+                                                    <td>Management, Measurement and Quality Control </td>
+                                                    <td>3.0 </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <!--winter 2020-->
+                                      <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                          <h6 class="m-0 font-weight-bold text-primary">Winter 2020</h6>
+                                        </div>
+                                        <div class="card-body" id= "collapseCardExample">
+                                            <div class="container">
+                                             
+                                              <table class="table table-hover table-sm">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Course Number</th>
+                                                    <th>Course Name</th>
+                                                    <th>Credits </th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>                          
+                                                  <tr>
+                                                    <td>Soen 345</td>
+                                                    <td>Software Testing, Verification and Quality Assurance</td>
+                                                    <td>3.0 </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Soen 357</td>
+                                                    <td>User Interface Design</td>
+                                                    <td>3.0 </td>
+                                                  </tr>
+                                                  <tr> 
+                                                    <td>Soen 390 </td>
+                                                    <td>Software Engineering Team Design Project </td>
+                                                    <td>3.5 </td>
+                                                  </tr>                          
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                        </div>
+                                      </div>
+                                                                        <!--Summer I 2020-->    
+                                     <div class="card shadow mb-4">
+                                      <div class="card-header py-3">
+                                      <h6 class="m-0 font-weight-bold text-primary" >Summer #1 2020</h6>
+                                      </div>
+                                      <div class="card-body" id= "collapseCardExample">
+                                          <div class="container">
+                                           
+                                            <table class="table table-hover table-sm">
+                                              <thead>
+                                                <tr>
+                                                  <th>Course Number</th>
+                                                  <th>Course Name</th>
+                                                  <th>Credits </th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>                          
+                                                 <tr>
+                                                  <td>Engr 301</td>
+                                                  <td>Engineering Management Principles and Economics</td>
+                                                  <td>3.0 </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Engr 392</td>
+                                                  <td>Impact of Technology on Society</td>
+                                                  <td>3.0 </td>
+                                                </tr>   
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                      </div>
+                                    </div>   
+                                     <!-- Page Heading -->
+                                     <h1 class="h3 mb-4 text-gray-800">Student Schedule Part-Time (2020-2021) [DAY TIME]</h1>
+                                        
+  
+                                    
+                                      <!--fall 2020-->
+                                      <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                          <h6 class="m-0 font-weight-bold text-primary">Fall 2020</h6>
+                                        </div>
+                                        <div class="card-body" id= "collapseCardExample">
+                                            <div class="container">
+                                             
+                                              <table class="table table-hover table-sm">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Course Number</th>
+                                                    <th>Course Name</th>
+                                                    <th>Credits </th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>Soen 321</td>
+                                                    <td>Information Systems Security</td>
+                                                    <td>3.0 </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Soen 490</td>
+                                                    <td>Capstone Software Engineering Design Project</td>
+                                                    <td>2.0 </td>
+                                                  </tr>
+                                                  <tr> 
+                                                    <td>Comp 445 </td>
+                                                    <td>Data Communication and Computer Networks</td>
+                                                    <td>4.0 </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <!--Winter 2021-->
+                                      <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                          <h6 class="m-0 font-weight-bold text-primary">Winter 2021</h6>
+                                        </div>
+                                        <div class="card-body" id= "collapseCardExample">
+                                            <div class="container">
+                                             
+                                              <table class="table table-hover table-sm">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Course Number</th>
+                                                    <th>Course Name</th>
+                                                    <th>Credits </th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>Soen 385</td>
+                                                    <td>Control Systems and Applications</td>
+                                                    <td>3.0 </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Soen 490</td>
+                                                    <td>Capstone Software Engineering Design Project</td>
+                                                    <td>2.0 </td>
+                                                  </tr>
+                                                  <tr> 
+                                                    <td>Comp 472 </td>
+                                                    <td>Artificial Intelligence</td>
+                                                    <td>4.0 </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                        </div>
+                                      </div>  
+                                      <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary" >Summer #1 2021</h6>
+                                        </div>
+                                        <div class="card-body" id= "collapseCardExample">
+                                            <div class="container">
+                                             
+                                              <table class="table table-hover table-sm">
+                                                <thead>
+                                                  <tr>
+                                                    <th>Course Number</th>
+                                                    <th>Course Name</th>
+                                                    <th>Credits </th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>                          
+                                                   <tr>
+                                                    <td>Comp 363</td>
+                                                    <td>Data Systems for Software Engineers</td>
+                                                    <td>4.0 </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Comp 371 </td>
+                                                    <td>Computer Graphics</td>
+                                                    <td>4.0 </td>
+                                                  </tr>   
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                        </div>
+                                    </div>            
+   
+                                    </div> 
+
+                                    <div id="sequencePartTime2" style="display: none">
+                                      <h2 class="h3 mb-4 text-gray-800">Student Schedule Part-Tme (2019-2020) [DAY TIME] </h2>
+                                      <!--fall 2019-->
+                                      <div class="card shadow mb-4">
+                                            <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary" >Fall 2019</h6>
+                                            </div>
+                                            <div class="card-body" id= "collapseCardExample">
+                                                <div class="container">
+                                                 
+                                                  <table class="table table-hover table-sm">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Course Number</th>
+                                                        <th>Course Name</th>
+                                                        <th>Credits </th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      
+                                                      <tr>
+                                                        <td>Soen 342</td>
+                                                        <td>Software Requirements and Specifications</td>
+                                                        <td>3.0 </td>
+                                                      </tr>
+                                                      <tr> 
+                                                        <td>Soen 343 </td>
+                                                        <td>Software Architecture and Desing I </td>
+                                                        <td>3.0 </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Soen 384 </td>
+                                                        <td>Management, Measurement and Quality Control </td>
+                                                        <td>3.0 </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          
+                                      <!--Winter 2020-->
+                                      <div class="card shadow mb-4">
+                                            <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary" >Winter 2020</h6>
+                                            </div>
+                                            <div class="card-body" id= "collapseCardExample">
+                                                <div class="container">
+                                                 
+                                                  <table class="table table-hover table-sm">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Course Number</th>
+                                                        <th>Course Name</th>
+                                                        <th>Credits </th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      
+                                                      <tr>
+                                                        <td>Soen 344</td>
+                                                        <td>Software Architecture and Design II</td>
+                                                        <td>3.0 </td>
+                                                      </tr>                          
+                                                      <tr>
+                                                        <td>Soen 357</td>
+                                                        <td>User Interface Design</td>
+                                                        <td>3.0 </td>
+                                                      </tr>
+                                                      <tr> 
+                                                        <td>Soen 390 </td>
+                                                        <td>Software Engineering Team Design Project </td>
+                                                        <td>3.5 </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <!--Summer II-->  
+                                        <div class="card shadow mb-4">
+                                          <div class="card-header py-3">
+                                          <h6 class="m-0 font-weight-bold text-primary" >Summer #2 2020</h6>
+                                          </div>
+                                          <div class="card-body" id= "collapseCardExample">
+                                              <div class="container">
+                                               
+                                                <table class="table table-hover table-sm">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Course Number</th>
+                                                      <th>Course Name</th>
+                                                      <th>Credits </th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>                          
+                                                     <tr>
+                                                      <td>Comp 353</td>
+                                                      <td>Databases</td>
+                                                      <td>4.0 </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Comp 371 </td>
+                                                      <td>Computer Graphics</td>
+                                                      <td>4.0 </td>
+                                                    </tr>   
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                          </div>
+                                      </div>  
+                            
+                                          <h2 class="h3 mb-4 text-gray-800">Student Schedule Part-Tme (2020-2021) [DAY TIME] </h2>
+                            
+                            
+                                         <!--fall 2020-->
+                                          <div class="card shadow mb-4">
+                                            <div class="card-header py-3">
+                                              <h6 class="m-0 font-weight-bold text-primary">Fall 2020</h6>
+                                            </div>
+                                            <div class="card-body" id= "collapseCardExample">
+                                                <div class="container">
+                                                 
+                                                  <table class="table table-hover table-sm">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Course Number</th>
+                                                        <th>Course Name</th>
+                                                        <th>Credits </th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>                         
+                                                      <tr>
+                                                        <td>Soen 321</td>
+                                                        <td>Information Systems Security</td>
+                                                        <td>3.0 </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Soen 490</td>
+                                                        <td>Capstone Software Engineering Design Project</td>
+                                                        <td>2.0 </td>
+                                                      </tr>
+                                                      <tr> 
+                                                        <td>Comp 445 </td>
+                                                        <td>Data Communication and Computer Networks</td>
+                                                        <td>4.0 </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <!--Winter 2021-->
+                                          <div class="card shadow mb-4">
+                                            <div class="card-header py-3">
+                                              <h6 class="m-0 font-weight-bold text-primary">Winter 2021</h6>
+                                            </div>
+                                            <div class="card-body" id= "collapseCardExample">
+                                                <div class="container">
+                                                 
+                                                  <table class="table table-hover table-sm">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Course Number</th>
+                                                        <th>Course Name</th>
+                                                        <th>Credits </th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>Soen 385</td>
+                                                        <td>Control Systems and Applications</td>
+                                                        <td>3.0 </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Soen 490</td>
+                                                        <td>Capstone Software Engineering Design Project</td>
+                                                        <td>2.0 </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Soen 345</td>
+                                                        <td>Software Testing, Verification and Quality Assurance</td>
+                                                        <td>3.0 </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                            </div>
+                                          </div>    
+                                                                                  <!--Summer I 2021-->    
+                                         <div class="card shadow mb-4">
+                                          <div class="card-header py-3">
+                                          <h6 class="m-0 font-weight-bold text-primary" >Summer #2 2021</h6>
+                                          </div>
+                                          <div class="card-body" id= "collapseCardExample">
+                                              <div class="container">
+                                               
+                                                <table class="table table-hover table-sm">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Course Number</th>
+                                                      <th>Course Name</th>
+                                                      <th>Credits </th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>                          
+                                                     <tr>
+                                                      <td>Engr 301</td>
+                                                      <td>Engineering Management Principles and Economics</td>
+                                                      <td>3.0 </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Engr 392</td>
+                                                      <td>Impact of Technology on Society</td>
+                                                      <td>3.0 </td>
+                                                    </tr>   
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                          </div>
+                                        </div> 
+                            
+                                        <h2 class="h3 mb-4 text-gray-800">Student Schedule Part-Tme (2021-2022) [DAY TIME] </h2>  
+  
+                            
+                                          <!--Fall 2021-->    
+                                         <div class="card shadow mb-4">
+                                            <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary" >Fall 2021</h6>
+                                            </div>
+                                            <div class="card-body" id= "collapseCardExample">
+                                                <div class="container">
+                                                 
+                                                  <table class="table table-hover table-sm">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Course Number</th>
+                                                        <th>Course Name</th>
+                                                        <th>Credits </th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>                          
+                                                       <tr>
+                                                        <td>Comp 363</td>
+                                                        <td>Data Systems for Software Engineers</td>
+                                                        <td>4.0 </td>
+                                                      </tr>
+                                                        <tr>
+                                                        <td>Phys 284</td>
+                                                        <td>Introduction to Astronomy</td>
+                                                        <td>3.0 </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                            </div>
+                                          </div>  
+                                        </div>  
+
+                                        <div id="sequencePartTime3" style="display: none">       
+                                          <!-- Page Heading -->
+                                          <h2 class="h3 mb-4 text-gray-800">Student Schedule Part-Tme (2019-2020) [DAY TIME] </h2>
+                                          <!--fall 2019-->
+                                          <div class="card shadow mb-4">
+                                                <div class="card-header py-3">
+                                                <h6 class="m-0 font-weight-bold text-primary" >Fall 2019</h6>
+                                                </div>
+                                                <div class="card-body" id= "collapseCardExample">
+                                                    <div class="container">
+                                                     
+                                                      <table class="table table-hover table-sm">
+                                                        <thead>
+                                                          <tr>
+                                                            <th>Course Number</th>
+                                                            <th>Course Name</th>
+                                                            <th>Credits </th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          
+                                                          <tr>
+                                                            <td>Soen 342</td>
+                                                            <td>Software Requirements and Specifications</td>
+                                                            <td>3.0 </td>
+                                                          </tr>
+                                                          <tr> 
+                                                            <td>Soen 343 </td>
+                                                            <td>Software Architecture and Desing I </td>
+                                                            <td>3.0 </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Soen 384 </td>
+                                                            <td>Management, Measurement and Quality Control </td>
+                                                            <td>3.0 </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              
+                                          <!--Winter 2020-->
+                                          <div class="card shadow mb-4">
+                                                <div class="card-header py-3">
+                                                <h6 class="m-0 font-weight-bold text-primary" >Winter 2020</h6>
+                                                </div>
+                                                <div class="card-body" id= "collapseCardExample">
+                                                    <div class="container">
+                                                     
+                                                      <table class="table table-hover table-sm">
+                                                        <thead>
+                                                          <tr>
+                                                            <th>Course Number</th>
+                                                            <th>Course Name</th>
+                                                            <th>Credits </th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          
+                                                          <tr>
+                                                            <td>Soen 344</td>
+                                                            <td>Software Architecture and Design II</td>
+                                                            <td>3.0 </td>
+                                                          </tr>                          
+                                                          <tr>
+                                                            <td>Soen 357</td>
+                                                            <td>User Interface Design</td>
+                                                            <td>3.0 </td>
+                                                          </tr>
+                                                          <tr> 
+                                                            <td>Soen 390 </td>
+                                                            <td>Software Engineering Team Design Project </td>
+                                                            <td>3.5 </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                               <!--Summer I 2020-->    
+                                             <div class="card shadow mb-4">
+                                              <div class="card-header py-3">
+                                              <h6 class="m-0 font-weight-bold text-primary" >Summer #1 2020</h6>
+                                              </div>
+                                              <div class="card-body" id= "collapseCardExample">
+                                                  <div class="container">
+                                                   
+                                                    <table class="table table-hover table-sm">
+                                                      <thead>
+                                                        <tr>
+                                                          <th>Course Number</th>
+                                                          <th>Course Name</th>
+                                                          <th>Credits </th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody>                          
+                                                         <tr>
+                                                          <td>Engr 301</td>
+                                                          <td>Engineering Management Principles and Economics</td>
+                                                          <td>3.0 </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td>Engr 392</td>
+                                                          <td>Impact of Technology on Society</td>
+                                                          <td>3.0 </td>
+                                                        </tr>   
+                                                      </tbody>
+                                                    </table>
+                                                  </div>
+                                              </div>
+                                            </div>   
+                                            <!--Summer II-->  
+                                          <div class="card shadow mb-4">
+                                              <div class="card-header py-3">
+                                              <h6 class="m-0 font-weight-bold text-primary" >Summer #2 2020</h6>
+                                              </div>
+                                              <div class="card-body" id= "collapseCardExample">
+                                                  <div class="container">
+                                                   
+                                                    <table class="table table-hover table-sm">
+                                                      <thead>
+                                                        <tr>
+                                                          <th>Course Number</th>
+                                                          <th>Course Name</th>
+                                                          <th>Credits </th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody>                          
+                                                         <tr>
+                                                          <td>Comp 353</td>
+                                                          <td>Databases</td>
+                                                          <td>4.0 </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td>Comp 371 </td>
+                                                          <td>Computer Graphics</td>
+                                                          <td>4.0 </td>
+                                                        </tr>   
+                                                      </tbody>
+                                                    </table>
+                                                  </div>
+                                              </div>
+                                          </div>  
+                                
+                                              <h2 class="h3 mb-4 text-gray-800">Student Schedule Part-Tme (2020-2021) [DAY TIME] </h2>
+                                
+                                           
+                                
+                                             <!--fall 2020-->
+                                              <div class="card shadow mb-4">
+                                                <div class="card-header py-3">
+                                                  <h6 class="m-0 font-weight-bold text-primary">Fall 2020</h6>
+                                                </div>
+                                                <div class="card-body" id= "collapseCardExample">
+                                                    <div class="container">
+                                                     
+                                                      <table class="table table-hover table-sm">
+                                                        <thead>
+                                                          <tr>
+                                                            <th>Course Number</th>
+                                                            <th>Course Name</th>
+                                                            <th>Credits </th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>                         
+                                                          <tr>
+                                                            <td>Soen 321</td>
+                                                            <td>Information Systems Security</td>
+                                                            <td>3.0 </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Soen 490</td>
+                                                            <td>Capstone Software Engineering Design Project</td>
+                                                            <td>2.0 </td>
+                                                          </tr>
+                                                          <tr> 
+                                                            <td>Comp 445 </td>
+                                                            <td>Data Communication and Computer Networks</td>
+                                                            <td>4.0 </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                
+                                            <!--Winter 2021-->
+                                              <div class="card shadow mb-4">
+                                                <div class="card-header py-3">
+                                                  <h6 class="m-0 font-weight-bold text-primary">Winter 2021</h6>
+                                                </div>
+                                                <div class="card-body" id= "collapseCardExample">
+                                                    <div class="container">
+                                                     
+                                                      <table class="table table-hover table-sm">
+                                                        <thead>
+                                                          <tr>
+                                                            <th>Course Number</th>
+                                                            <th>Course Name</th>
+                                                            <th>Credits </th>
+                                                          </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>Soen 385</td>
+                                                            <td>Control Systems and Applications</td>
+                                                            <td>3.0 </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Soen 490</td>
+                                                            <td>Capstone Software Engineering Design Project</td>
+                                                            <td>2.0 </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Soen 345</td>
+                                                            <td>Software Testing, Verification and Quality Assurance</td>
+                                                            <td>3.0 </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </div>
+                                                </div>
+                                              </div>    
+                                </div>
+                                
         </div>
         <!-- /.container-fluid -->
 
@@ -1063,7 +1778,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+
           </div>
         </div>
       </footer>

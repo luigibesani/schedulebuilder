@@ -47,6 +47,19 @@ function displaySequence(status, summerStatus){
         var seq =  document.getElementById("sequenceSummer12");
         seq.style.display = "block";
     }
+    if(status == 2 && summerStatus == 1){
+        var seq =  document.getElementById("sequencePartTime1");
+        seq.style.display = "block";
+    }
+    if(status == 2 && summerStatus == 2){
+        var seq =  document.getElementById("sequencePartTime2");
+        seq.style.display = "block";
+    }
+    if(status == 2 && summerStatus == 3){
+        console.log("this one");
+        var seq =  document.getElementById("sequencePartTime3");
+        seq.style.display = "block";
+    }
 
 
 }
